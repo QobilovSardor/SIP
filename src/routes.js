@@ -1,5 +1,8 @@
 import {
   HeaderMenu,
+  HeaderNavbar,
+  HeaderNavbarTwoPanel,
+  HeaderOpenNavbar,
   HeaderTwoPanel,
   Home,
   Intro,
@@ -41,6 +44,18 @@ const coreRoutes = [
   {
     path: "/navbar-two-panel",
     component: NavbarTwoPanel,
+  },
+  {
+    path: "/header-navbar",
+    component: HeaderNavbar,
+  },
+  {
+    path: "/header-open-navbar",
+    component: HeaderOpenNavbar,
+  },
+  {
+    path: "/header-navbar-two-panel",
+    component: HeaderNavbarTwoPanel,
   },
 ];
 const routes = [...coreRoutes];

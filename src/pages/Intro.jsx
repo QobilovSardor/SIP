@@ -60,25 +60,25 @@ export const Intro = () => {
             <Link to="navbar-two-panel" className="intro-card">
               <img src={assets.page1_7} alt="" />
               <Text size="s" view="secondary" className="page-info">
-              2.3 Navbar and Two Panel
+                2.3 Navbar and Two Panel
               </Text>
             </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_1} alt="" />
+            <Link to="header-navbar" className="intro-card">
+              <img src={assets.page1_8} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                3.1 Header + Navbar Default
               </Text>
             </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_2} alt="" />
+            <Link to="header-open-navbar" className="intro-card">
+              <img src={assets.page1_9} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                3.2 Header + Navbar Open
               </Text>
             </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_3} alt="" />
+            <Link to="header-navbar-two-panel" className="intro-card">
+              <img src={assets.page10} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                3.3 Header + Navbar and Two Panel
               </Text>
             </Link>
             <Link to="" className="intro-card">

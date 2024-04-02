@@ -29,7 +29,8 @@ const items = [
 ];
 const pagesSimple = ["Главная", "Раздел", "Страница"];
 
-export const Header = () => {
+// eslint-disable-next-line react/prop-types
+export const Header = ({ searchHeader }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const location = useLocation().pathname;
 
@@ -46,44 +47,50 @@ export const Header = () => {
           <TextField className="search-input" size="xs" iconSize="xs" />
           <IconSearchStroked className="search-icon" />
         </div>
-        <div className={`${location === "/" ? "hidden " : ""}line`}></div>
-        <div
-          className={`${location === "/" ? "hidden " : ""} header-breadcrumbs`}
-        >
-          <Button
-            label="Назад"
-            size="xs"
-            view="ghost"
-            iconLeft={IconBackward}
-          />
-          <Breadcrumbs
-            size="xs"
-            fitMode="scroll"
-            items={pagesSimple}
-            getItemLabel={(item) => item}
-          />
-          <Badge size="xs" status="system" label="черновик" />
-          <Text size="xs" view="secondary">
-            20.01.2023
-          </Text>
-          <Tag className="header-dropdown" icon={IconKebab} size="xs" />
-          <div className="line mx-8"></div>
-          <div className="nav-list">
-            <ul>
-              {items.map((item, index) => (
-                <li key={index}>
-                  <a
-                    className={index === activeIndex ? "active" : ""}
-                    href="#!"
-                    onClick={() => setActiveIndex(index)}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        {searchHeader ? null : (
+          <>
+            <div className={`${location === "/" ? "hidden " : ""}line`}></div>
+            <div
+              className={`${
+                location === "/" ? "hidden " : ""
+              } header-breadcrumbs`}
+            >
+              <Button
+                label="Назад"
+                size="xs"
+                view="ghost"
+                iconLeft={IconBackward}
+              />
+              <Breadcrumbs
+                size="xs"
+                fitMode="scroll"
+                items={pagesSimple}
+                getItemLabel={(item) => item}
+              />
+              <Badge size="xs" status="system" label="черновик" />
+              <Text size="xs" view="secondary">
+                20.01.2023
+              </Text>
+              <Tag className="header-dropdown" icon={IconKebab} size="xs" />
+              <div className="line mx-8"></div>
+              <div className="nav-list">
+                <ul>
+                  {items.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        className={index === activeIndex ? "active" : ""}
+                        href="#!"
+                        onClick={() => setActiveIndex(index)}
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </>
+        )}
       </div>
       <div className={`${location === "/" ? "hidden " : ""} header-right`}>
         <div>

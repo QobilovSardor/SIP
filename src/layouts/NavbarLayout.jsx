@@ -21,27 +21,7 @@ import { IconBento } from "@consta/icons/IconBento";
 import { IconArrowPrevious } from "@consta/icons/IconArrowPrevious";
 
 // eslint-disable-next-line react/prop-types
-export const NavbarLayout = ({ openNav }) => {
-  // const [isActive, setIsActive] = useState(false);
-  // const [isOpen, setOpen] = useState({});
-
-  // const handleChangeActive = () => {
-  //   if (isActive) {
-  //     setIsActive(false);
-  //     setOpen({});
-  //   } else {
-  //     setIsActive(true);
-  //   }
-  // };
-
-  // const handleCollapseToggle = (key) => {
-  //   if (isActive) {
-  //     setOpen((prevState) => ({
-  //       ...prevState,
-  //       [key]: !prevState[key],
-  //     }));
-  //   }
-  // };
+export const NavbarLayout = ({ openNav, hideHamburger }) => {
   const [isActive, setIsActive] = useState(openNav);
   const [isOpen, setOpen] = useState({});
 
@@ -66,17 +46,21 @@ export const NavbarLayout = ({ openNav }) => {
   return (
     <div className={`navbar ${isActive ? "active" : null}`}>
       <div className="navbar-top">
-        <Button
-          view="clear"
-          size="xs"
-          onlyIcon
-          iconLeft={IconHamburger}
-          className="hamburger-menu"
-          onClick={handleChangeActive}
-        />
-        <div className="logo">
-          <img src={assets.logo} alt="logo" width="10" height="11" />
-        </div>
+        {hideHamburger ? null : (
+          <>
+            <Button
+              view="clear"
+              size="xs"
+              onlyIcon
+              iconLeft={IconHamburger}
+              className="hamburger-menu"
+              onClick={handleChangeActive}
+            />
+            <div className="logo">
+              <img src={assets.logo} alt="logo" width="10" height="11" />
+            </div>
+          </>
+        )}
         <div>
           <div className="nav-list active">
             <div className="nav-list__icon">

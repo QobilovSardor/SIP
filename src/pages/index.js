@@ -5,3 +5,6 @@ export { HeaderTwoPanel } from "./HeaderTwoPanel";
 export { NavbarDefault } from "./NavbarDefault";
 export { NavbarOpen } from "./NavbarOpen";
 export {NavbarTwoPanel} from './NavbarTwoPanel';
+export {HeaderNavbar} from './HeaderNavbar';
+export {HeaderOpenNavbar} from './HeaderOpenNavbar';
+export {HeaderNavbarTwoPanel} from './HeaderNavbarTwoPanel';

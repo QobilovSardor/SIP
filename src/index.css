@@ -398,6 +398,10 @@ body {
   background: #00426912;
 }
 
+.nav-list.active .nav-list__icon svg path {
+  fill: #002033;
+}
+
 .nav-list.active .nav-link {
   color: #002033;
 }
