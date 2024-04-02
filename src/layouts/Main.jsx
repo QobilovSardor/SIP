@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { cnMixSpace } from "@consta/uikit/MixSpace";
 
 // eslint-disable-next-line react/prop-types
-export const Main = ({ button }) => {
+export const Main = ({ button, className }) => {
   return (
-    <main className="main">
+    <main className={`main ${className}`}>
       <Text view="secondary" size="s">
         Область для контента
       </Text>

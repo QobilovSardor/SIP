@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@consta/header": "^3.0.0",
     "@consta/icons": "^1.0.1",
     "@consta/uikit": "^5.1.0",
     "react": "^18.2.0",

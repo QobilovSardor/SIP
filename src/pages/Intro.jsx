@@ -45,22 +45,22 @@ export const Intro = () => {
                 1.3 Header and Two Panel
               </Text>
             </Link>
-            <Link to="" className="intro-card">
+            <Link to="navbar" className="intro-card">
               <img src={assets.page1_4} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                2.1 Navbar Default
               </Text>
             </Link>
-            <Link to="" className="intro-card">
+            <Link to="navbar-open" className="intro-card">
               <img src={assets.page1_6} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                2.2 Navbar Open
               </Text>
             </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_6} alt="" />
+            <Link to="navbar-two-panel" className="intro-card">
+              <img src={assets.page1_7} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+              2.3 Navbar and Two Panel
               </Text>
             </Link>
             <Link to="" className="intro-card">
