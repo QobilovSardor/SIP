@@ -14,3 +14,6 @@ export { OpenNavbarHeaderDefault } from "./OpenNavbarHeaderDefault";
 export { NavbarHeaderTwoPanel } from "./NavbarHeaderTwoPanel";
 export { OpenNavbarHeaderModern } from "./OpenNavbarHeaderModern";
 export { NavbarHeaderTwoPanelModern } from "./NavbarHeaderTwoPanelModern";
+export { OtherFixedWidth } from "./OtherFixedWidth";
+export { OtherOverlayContent } from "./OtherOverlayContent";
+export { OtherBlockContainer } from "./OtherBlockContainer";

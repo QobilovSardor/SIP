@@ -15,7 +15,11 @@ import page12 from "./page12.png";
 import page13 from "./page13.png";
 import page14 from "./page14.png";
 import page15 from "./page15.png";
-import page16 from "./page15.png";
+import page16 from "./page16.png";
+import page17 from "./page17.png";
+import page18 from "./page18.png";
+import page19 from "./page19.png";
+import page20 from "./page20.png";
 
 export default {
   logo,
@@ -36,4 +40,8 @@ export default {
   page14,
   page15,
   page16,
+  page17,
+  page18,
+  page19,
+  page20,
 };

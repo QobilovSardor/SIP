@@ -15,6 +15,9 @@ import {
   NavbarTwoPanel,
   OpenNavbarHeaderDefault,
   OpenNavbarHeaderModern,
+  OtherBlockContainer,
+  OtherFixedWidth,
+  OtherOverlayContent,
 } from "./pages";
 import { HeaderDefault } from "./pages/HeaderDefault";
 
@@ -82,10 +85,23 @@ const coreRoutes = [
   {
     path: "/open-navbar-header-modern",
     component: OpenNavbarHeaderModern,
-  },{
+  },
+  {
     path: "navbar-header-two-panel-modern",
-    component: NavbarHeaderTwoPanelModern
-  }
+    component: NavbarHeaderTwoPanelModern,
+  },
+  {
+    path: "other-fixed-width",
+    component: OtherFixedWidth,
+  },
+  {
+    path: "other-overlay-content",
+    component: OtherOverlayContent,
+  },
+  {
+    path: "other-block-container",
+    component: OtherBlockContainer,
+  },
 ];
 const routes = [...coreRoutes];
 export default routes;

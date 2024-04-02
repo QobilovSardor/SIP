@@ -114,31 +114,31 @@ export const Intro = () => {
             <Link to="navbar-header-two-panel-modern" className="intro-card">
               <img src={assets.page16} alt="" />
               <Text size="s" view="secondary" className="page-info">
-              5.3 Navbar + Header and Two Panel
+                5.3 Navbar + Header and Two Panel
               </Text>
             </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_4} alt="" />
+            <Link to="other-fixed-width" className="intro-card">
+              <img src={assets.page17} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                6.1 Other - Fixed width
               </Text>
             </Link>
-            <Link to="" className="intro-card">
+            <Link to="other-overlay-content" className="intro-card">
+              <img src={assets.page18} alt="" />
+              <Text size="s" view="secondary" className="page-info">
+                6.2 Other - Overlay content
+              </Text>
+            </Link>
+            <Link to="other-block-container" className="intro-card">
+              <img src={assets.page19} alt="" />
+              <Text size="s" view="secondary" className="page-info">
+                6.2 Other - Overlay content
+              </Text>
+            </Link>
+            <Link to="other-panel-modal" className="intro-card">
               <img src={assets.page1_6} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
-              </Text>
-            </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_6} alt="" />
-              <Text size="s" view="secondary" className="page-info">
-                0.1 Page
-              </Text>
-            </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_6} alt="" />
-              <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                7.1 Other - Open Panel or Modal
               </Text>
             </Link>
           </div>

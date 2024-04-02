@@ -22,20 +22,24 @@ const items = [
   "Лейауты",
 ];
 
-export const DefaultHeader = () => {
+// eslint-disable-next-line react/prop-types, no-unused-vars
+export const DefaultHeader = ({ hideHamburger }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const location = useLocation().pathname;
 
   return (
     <header className="header">
+      <div className="header-container">
       <div className="header-left">
-        <Button
-          view="clear"
-          size="xs"
-          onlyIcon
-          iconLeft={IconHamburger}
-          className="hamburger-menu"
-        />
+        {hideHamburger ? null : (
+          <Button
+            view="clear"
+            size="xs"
+            onlyIcon
+            iconLeft={IconHamburger}
+            className="hamburger-menu"
+          />
+        )}
         <a className="logo-box" href="#!">
           <div className="logo">
             <img src={assets.logo} alt="logo" width="10" height="11" />
@@ -78,6 +82,7 @@ export const DefaultHeader = () => {
           avatarUrl="https://i.ibb.co/K2R8Lqb/Rectangle-1496.png"
           name="Имя Фамилия"
         />
+      </div>
       </div>
     </header>
   );
