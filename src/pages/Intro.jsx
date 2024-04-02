@@ -81,10 +81,10 @@ export const Intro = () => {
                 3.3 Header + Navbar and Two Panel
               </Text>
             </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_4} alt="" />
+            <Link to="navbar-header-default" className="intro-card">
+              <img src={assets.page11} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+              4.1 Navbar + Header Default
               </Text>
             </Link>
             <Link to="" className="intro-card">

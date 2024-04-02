@@ -10,6 +10,7 @@ import page1_7 from "./page1.7.png";
 import page1_8 from "./page1.8.png";
 import page1_9 from "./page1.9.png";
 import page10 from "./page10.png";
+import page11 from "./page11.png";
 export default {
   logo,
   page01,
@@ -23,4 +24,5 @@ export default {
   page1_8,
   page1_9,
   page10,
+  page11,
 };

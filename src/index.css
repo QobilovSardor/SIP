@@ -335,7 +335,12 @@ body {
 /* navbar */
 .navbar.active {
   min-width: 320px;
+  overflow-y: auto;
   transform: scaleX(320px);
+}
+
+.w-full {
+  width: 100%;
 }
 
 .navbar {
@@ -343,7 +348,7 @@ body {
   border-right: 1px solid #00416633;
   background: #fff;
   text-align: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: 56px;
   min-width: 56px;
   overflow: hidden;

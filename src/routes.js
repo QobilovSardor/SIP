@@ -7,6 +7,7 @@ import {
   Home,
   Intro,
   NavbarDefault,
+  NavbarHeaderDefault,
   NavbarOpen,
   NavbarTwoPanel,
 } from "./pages";
@@ -56,6 +57,10 @@ const coreRoutes = [
   {
     path: "/header-navbar-two-panel",
     component: HeaderNavbarTwoPanel,
+  },
+  {
+    path: "/navbar-header-default",
+    component: NavbarHeaderDefault,
   },
 ];
 const routes = [...coreRoutes];
