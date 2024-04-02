@@ -1,16 +1,16 @@
 import { Header, NavbarLayout } from "../layouts";
-import { Main } from "../layouts/Main";
+import { Panels } from "../layouts/Panels";
 
-export const NavbarHeaderModern = () => {
+export const NavbarHeaderTwoPanel = () => {
   return (
     <>
-      <div className="flex w-full modern-box">
+      <div className="flex w-full">
         <div className="h-fix">
-          <NavbarLayout openNav={false} hideHamburger={false} />
+          <NavbarLayout openNav={true} hideHamburger={false} />
         </div>
         <div className="w-full">
           <Header searchHeader={true} removeLogo={true} />
-          <Main button={true} />
+          <Panels showBtn={true} />
         </div>
       </div>
     </>

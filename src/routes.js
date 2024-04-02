@@ -8,8 +8,13 @@ import {
   Intro,
   NavbarDefault,
   NavbarHeaderDefault,
+  NavbarHeaderModern,
+  NavbarHeaderTwoPanel,
+  NavbarHeaderTwoPanelModern,
   NavbarOpen,
   NavbarTwoPanel,
+  OpenNavbarHeaderDefault,
+  OpenNavbarHeaderModern,
 } from "./pages";
 import { HeaderDefault } from "./pages/HeaderDefault";
 
@@ -62,6 +67,25 @@ const coreRoutes = [
     path: "/navbar-header-default",
     component: NavbarHeaderDefault,
   },
+  {
+    path: "/navbar-header-default-open",
+    component: OpenNavbarHeaderDefault,
+  },
+  {
+    path: "/navbar-header-two-panel",
+    component: NavbarHeaderTwoPanel,
+  },
+  {
+    path: "/navbar-header-modern",
+    component: NavbarHeaderModern,
+  },
+  {
+    path: "/open-navbar-header-modern",
+    component: OpenNavbarHeaderModern,
+  },{
+    path: "navbar-header-two-panel-modern",
+    component: NavbarHeaderTwoPanelModern
+  }
 ];
 const routes = [...coreRoutes];
 export default routes;

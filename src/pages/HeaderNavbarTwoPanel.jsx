@@ -6,7 +6,7 @@ export const HeaderNavbarTwoPanel = () => {
     <>
       <Header searchHeader={true} />
       <div className="flex">
-        <Panels navLayout={true} hideHamburger={true} />
+        <Panels navLayout={true} showBtn={true} hideHamburger={true} />
       </div>
     </>
   );

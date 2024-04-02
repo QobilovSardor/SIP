@@ -84,37 +84,37 @@ export const Intro = () => {
             <Link to="navbar-header-default" className="intro-card">
               <img src={assets.page11} alt="" />
               <Text size="s" view="secondary" className="page-info">
-              4.1 Navbar + Header Default
+                4.1 Navbar + Header Default
               </Text>
             </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_6} alt="" />
+            <Link to="navbar-header-default-open" className="intro-card">
+              <img src={assets.page12} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                4.2 Navbar + Header Open
               </Text>
             </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_6} alt="" />
+            <Link to="navbar-header-two-panel" className="intro-card">
+              <img src={assets.page13} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                4.3 Navbar + Header and Two Panel
               </Text>
             </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_1} alt="" />
+            <Link to="navbar-header-modern" className="intro-card">
+              <img src={assets.page14} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                5.1 Navbar + Header Modern
               </Text>
             </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_2} alt="" />
+            <Link to="open-navbar-header-modern" className="intro-card">
+              <img src={assets.page15} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                5.2 Navbar + Header Open
               </Text>
             </Link>
-            <Link to="" className="intro-card">
-              <img src={assets.page1_3} alt="" />
+            <Link to="navbar-header-two-panel-modern" className="intro-card">
+              <img src={assets.page16} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+              5.3 Navbar + Header and Two Panel
               </Text>
             </Link>
             <Link to="" className="intro-card">

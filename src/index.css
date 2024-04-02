@@ -274,6 +274,36 @@ body {
 }
 
 /* main */
+.modern-box {
+  background: #fff;
+  padding-right: 8px;
+}
+
+.modern-box .panels .left-sidebar {
+  margin-right: 8px;
+}
+
+.modern-box .panels .right-sidebar {
+  margin-left: 8px;
+}
+
+.modern-box .main,
+.modern-box .panels .sidebar {
+  border: 1px solid #00416633;
+  border-radius: 8px;
+  height: calc(100vh - 48px - 8px);
+  background: #EDEEF0;
+}
+
+.modern-box .header {
+  padding-right: 6px;
+}
+
+.modern-box .navbar,
+.modern-box .header {
+  border: none;
+}
+
 .main {
   display: flex;
   align-items: center;
@@ -341,6 +371,11 @@ body {
 
 .w-full {
   width: 100%;
+}
+
+.h-fix .navbar {
+  height: 100vh;
+
 }
 
 .navbar {

@@ -11,6 +11,12 @@ import page1_8 from "./page1.8.png";
 import page1_9 from "./page1.9.png";
 import page10 from "./page10.png";
 import page11 from "./page11.png";
+import page12 from "./page12.png";
+import page13 from "./page13.png";
+import page14 from "./page14.png";
+import page15 from "./page15.png";
+import page16 from "./page15.png";
+
 export default {
   logo,
   page01,
@@ -25,4 +31,9 @@ export default {
   page1_9,
   page10,
   page11,
+  page12,
+  page13,
+  page14,
+  page15,
+  page16,
 };
