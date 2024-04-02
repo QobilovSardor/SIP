@@ -5,7 +5,7 @@ export const HeaderDefault = () => {
   return (
     <>
       <DefaultHeader />
-      <Main />
+      <Main button={true} />
     </>
   );
 };

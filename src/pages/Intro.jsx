@@ -39,10 +39,10 @@ export const Intro = () => {
                 1.2 Header and Menu
               </Text>
             </Link>
-            <Link to="" className="intro-card">
+            <Link to="header-two-panel" className="intro-card">
               <img src={assets.page1_3} alt="" />
               <Text size="s" view="secondary" className="page-info">
-                0.1 Page
+                1.3 Header and Two Panel
               </Text>
             </Link>
             <Link to="" className="intro-card">

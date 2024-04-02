@@ -7,7 +7,7 @@ export const HeaderMenu = () => {
     <>
       <DefaultHeader />
       <Menu />
-      <Main />
+      <Main button={true} />
     </>
   );
 };

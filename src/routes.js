@@ -1,4 +1,4 @@
-import { HeaderMenu, Home, Intro } from "./pages";
+import { HeaderMenu, HeaderTwoPanel, Home, Intro } from "./pages";
 import { HeaderDefault } from "./pages/HeaderDefault";
 
 const coreRoutes = [
@@ -17,6 +17,10 @@ const coreRoutes = [
   {
     path: "/header-menu",
     component: HeaderMenu,
+  },
+  {
+    path: "/header-two-panel",
+    component: HeaderTwoPanel,
   },
 ];
 const routes = [...coreRoutes];
