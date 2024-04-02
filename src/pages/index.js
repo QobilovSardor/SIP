@@ -17,3 +17,4 @@ export { NavbarHeaderTwoPanelModern } from "./NavbarHeaderTwoPanelModern";
 export { OtherFixedWidth } from "./OtherFixedWidth";
 export { OtherOverlayContent } from "./OtherOverlayContent";
 export { OtherBlockContainer } from "./OtherBlockContainer";
+export { OpenPanelOrModal } from "./OpenPanelOrModal";

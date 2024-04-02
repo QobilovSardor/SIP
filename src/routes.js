@@ -15,6 +15,7 @@ import {
   NavbarTwoPanel,
   OpenNavbarHeaderDefault,
   OpenNavbarHeaderModern,
+  OpenPanelOrModal,
   OtherBlockContainer,
   OtherFixedWidth,
   OtherOverlayContent,
@@ -101,6 +102,10 @@ const coreRoutes = [
   {
     path: "other-block-container",
     component: OtherBlockContainer,
+  },
+  {
+    path: "open-panel-or-modal",
+    component: OpenPanelOrModal,
   },
 ];
 const routes = [...coreRoutes];

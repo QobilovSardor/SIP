@@ -135,7 +135,7 @@ export const Intro = () => {
                 6.2 Other - Overlay content
               </Text>
             </Link>
-            <Link to="other-panel-modal" className="intro-card">
+            <Link to="open-panel-or-modal" className="intro-card">
               <img src={assets.page1_6} alt="" />
               <Text size="s" view="secondary" className="page-info">
                 7.1 Other - Open Panel or Modal

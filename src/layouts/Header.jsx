@@ -1,5 +1,4 @@
 import assets from "../assets";
-import { TextField } from "@consta/uikit/TextField";
 import { Button } from "@consta/uikit/Button";
 import { IconSearchStroked } from "@consta/icons/IconSearchStroked";
 import { IconRing } from "@consta/icons/IconRing";
@@ -46,12 +45,15 @@ export const Header = ({ searchHeader, removeLogo }) => {
           </a>
         )}
         <div className={`${location === "/" ? "hidden " : ""}search-box`}>
-          <TextField className="search-input" size="xs" iconSize="xs" />
-          <IconSearchStroked className="search-icon" />
+          <div className="search-box mr-">
+            <input type="text" placeholder="Поиск" />
+            <IconSearchStroked className="search-icon" />
+          </div>
         </div>
+        <div className="line"></div>
         {searchHeader ? null : (
           <>
-            <div className={`${location === "/" ? "hidden " : ""}line`}></div>
+            {/* <div className={`${location === "/" ? "hidden " : ""}line`}></div> */}
             <div
               className={`${
                 location === "/" ? "hidden " : ""
