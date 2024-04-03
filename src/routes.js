@@ -19,6 +19,7 @@ import {
   OtherBlockContainer,
   OtherFixedWidth,
   OtherOverlayContent,
+  ResizePage,
 } from "./pages";
 import { HeaderDefault } from "./pages/HeaderDefault";
 
@@ -106,6 +107,10 @@ const coreRoutes = [
   {
     path: "open-panel-or-modal",
     component: OpenPanelOrModal,
+  },
+  {
+    path: "resizer-page",
+    component: ResizePage,
   },
 ];
 const routes = [...coreRoutes];
