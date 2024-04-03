@@ -56,8 +56,11 @@ export const NavbarLayout = ({ openNav, hideHamburger }) => {
               className="hamburger-menu"
               onClick={handleChangeActive}
             />
-            <div className="logo">
-              <img src={assets.logo} alt="logo" width="10" height="11" />
+            <div className="nav-logo flex">
+              <div className="logo">
+                <img src={assets.logo} alt="logo" width="10" height="11" />
+              </div>
+              <h4>Приложение</h4>
             </div>
           </>
         )}
@@ -91,7 +94,7 @@ export const NavbarLayout = ({ openNav, hideHamburger }) => {
             className="nav-list col"
             size="xs"
             label={
-              <div className="flex items-center">
+              <div className="flex items-center notification">
                 <div className="nav-list__icon">
                   <IconFolderOpen />
                 </div>

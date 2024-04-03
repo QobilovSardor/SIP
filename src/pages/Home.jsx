@@ -112,7 +112,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="flex">
-            <Button label="Кнопка" view="primary" size="xs" />
+            <Button label="Кнопка" view="secondary" size="xs" />
             <Button label="Кнопка" view="ghost" size="xs" />
             <div className="line"></div>
             <Button onlyIcon view="ghost" size="xs" iconLeft={IconSettings} />

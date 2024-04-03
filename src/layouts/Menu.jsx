@@ -8,6 +8,7 @@ import { IconAllDone } from "@consta/icons/IconAllDone";
 import { IconAlert } from "@consta/icons/IconAlert";
 import { IconUpload } from "@consta/icons/IconUpload";
 import { IconExpand } from "@consta/icons/IconExpand";
+import { Text } from "@consta/uikit/Text";
 
 const items = [
   "Общая",
@@ -71,6 +72,9 @@ export const Menu = ({ menuRight }) => {
       </div>
       {menuRight ? (
         <div className="menu-right">
+          <Text size="s" view="secondary">
+            Информационный текст
+          </Text>
           <Button
             className="toolbar"
             iconLeft={IconAllDone}
