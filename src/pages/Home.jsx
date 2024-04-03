@@ -22,11 +22,12 @@ const itemsTab = ["Информация", "Документы", "Статист�
 const pagesSimple = ["Главная", "Раздел", "Страница"];
 export const Home = () => {
   const [value, setValue] = useState(itemsTab[0]);
+  const [valueTwo, setValueTwo] = useState(items[0]);
   const getItemLabel = (label) => label;
 
   return (
     <div className="home">
-      <Header />
+      <Header hamburgerLogo={true} />
       <Menu menuRight={true} />
       <div className="home-container">
         <div className="">
@@ -50,7 +51,7 @@ export const Home = () => {
               </Text>
             </div>
             <Button label="Кнопка" view="ghost" size="xs" />
-            <div className="line"></div>
+            <div className="line m-0"></div>
             <Button onlyIcon view="ghost" size="xs" iconLeft={IconSettings} />
             <Button onlyIcon view="ghost" size="xs" iconLeft={IconKebab} />
           </div>
@@ -73,7 +74,7 @@ export const Home = () => {
             <Button onlyIcon view="ghost" size="xs" iconLeft={IconKebab} />
           </div>
         </div>
-        <Text view="secondary" className="home-info px-16">
+        <Text view="secondary" className="home-info px-16 text-12">
           Место для вывода очень-очень длинного описания и дополнительной
           информации. Повторим и покажем на две строки, место <br /> для вывода
           длинного описания и дополнительной информации
@@ -88,8 +89,8 @@ export const Home = () => {
           <div>
             <div className="toolbar flex">
               <ChoiceGroup
-                value={value}
-                onChange={setValue}
+                value={valueTwo}
+                onChange={setValueTwo}
                 items={items}
                 getItemLabel={(item) => item}
                 multiple={false}

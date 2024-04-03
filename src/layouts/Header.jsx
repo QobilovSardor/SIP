@@ -8,10 +8,10 @@ import { IconBackward } from "@consta/icons/IconBackward";
 import { Breadcrumbs } from "@consta/uikit/Breadcrumbs";
 import { Badge } from "@consta/uikit/Badge";
 import { Text } from "@consta/uikit/Text";
-import { Tag } from "@consta/uikit/Tag";
 import { useState } from "react";
 import { User } from "@consta/uikit/User";
 import { useLocation } from "react-router-dom";
+import { IconHamburger } from "@consta/icons/IconHamburger";
 
 const items = [
   "Главная",
@@ -29,13 +29,22 @@ const items = [
 const pagesSimple = ["Главная", "Раздел", "Страница"];
 
 // eslint-disable-next-line react/prop-types
-export const Header = ({ searchHeader, removeLogo }) => {
+export const Header = ({ searchHeader, removeLogo, hamburgerLogo }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const location = useLocation().pathname;
 
   return (
     <header className="header">
       <div className="header-left">
+        {hamburgerLogo ? (
+          <Button
+            view="clear"
+            size="xs"
+            onlyIcon
+            iconLeft={IconHamburger}
+            className="hamburger-menu"
+          />
+        ) : null}
         {removeLogo ? null : (
           <a className="logo-box" href="#!">
             <div className="logo">
@@ -52,7 +61,7 @@ export const Header = ({ searchHeader, removeLogo }) => {
         </div>
         {searchHeader ? null : (
           <>
-          <div className="line"></div>
+            <div className="line"></div>
             {/* <div className={`${location === "/" ? "hidden " : ""}line`}></div> */}
             <div
               className={`${
@@ -67,7 +76,7 @@ export const Header = ({ searchHeader, removeLogo }) => {
               />
               <Breadcrumbs
                 size="xs"
-                fitMode="scroll"
+                fitMode=""
                 items={pagesSimple}
                 getItemLabel={(item) => item}
               />
@@ -75,7 +84,8 @@ export const Header = ({ searchHeader, removeLogo }) => {
               <Text size="xs" view="secondary">
                 20.01.2023
               </Text>
-              <Tag className="header-dropdown" icon={IconKebab} size="xs" />
+              {/* <Tag className="header-dropdown" icon={IconKebab} size="xs" /> */}
+              <Button onlyIcon view="cencle" iconLeft={IconKebab} size="xs" />
               <div className="line mx-8"></div>
               <div className="nav-list">
                 <ul>

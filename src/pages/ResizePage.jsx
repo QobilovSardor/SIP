@@ -9,55 +9,89 @@ import { cnMixSpace } from "@consta/uikit/MixSpace";
 import { Link } from "react-router-dom";
 import { Text } from "@consta/uikit/Text";
 import { Resizable } from "re-resizable";
+// import { useResizableContent } from "@consta/uikit/useResizableContent";
+// import { useMemo } from "react";
+// import { useRefs } from "@consta/uikit/useRefs";
 
 export const ResizePage = () => {
+  // const [
+  //   containerRef,
+  //   horizontalBlock1,
+  //   horizontalBlock2,
+  //   verticalBlock1,
+  //   verticalBlock2,
+  // ] = useRefs(5);
+
+  // const blocks1 = useMemo(
+  //   () => [horizontalBlock1, horizontalBlock2],
+  //   [horizontalBlock1, horizontalBlock2]
+  // );
+
+  // const blocks2 = useMemo(
+  //   () => [verticalBlock1, verticalBlock2],
+  //   [verticalBlock1, verticalBlock2]
+  // );
+
+  // const { sizes: hSizes, handlers: hHandlers } = useResizableContent({
+  //   blocks: blocks1,
+  //   direction: "horizontal",
+  //   container: containerRef,
+  //   isActive: true,
+  // });
+
+  // const { sizes: vSizes, handlers: vHandlers } = useResizableContent({
+  //   blocks: blocks2,
+  //   direction: "vertical",
+  //   container: containerRef,
+  //   isActive: true,
+  // });
   return (
     <div className="resize-page">
       <div className="resize-top">
         <div className="left-sidebar">
           <Resizable
-            className="resize-box"
+          className="resize-box"
             defaultSize={{
               minW: "320px",
             }}
           >
-            <div className="sidebar-box">
-              <div className="header-sidebar">
-                <Text as="p" size="l" view="primary" weight="semibold">
-                  Панель
-                </Text>
+          <div className="sidebar-box">
+            <div className="header-sidebar">
+              <Text as="p" size="l" view="primary" weight="semibold">
+                Панель
+              </Text>
+              <Button
+                size="xs"
+                view="ghost"
+                width="default"
+                onlyIcon
+                iconLeft={IconClose}
+              />
+            </div>
+            <div className="sidebar-body">
+              <Text as="p" size="xs" view="secondary">
+                Область для контента
+              </Text>
+            </div>
+            <div className="modal-footer">
+              <Button
+                size="xs"
+                view="ghost"
+                width="default"
+                onlyIcon
+                iconLeft={IconQuestion}
+              />
+              <div>
+                <Button label="Кнопка" size="xs" view="secondary" />
                 <Button
+                  label="Кнопка"
                   size="xs"
                   view="ghost"
-                  width="default"
-                  onlyIcon
-                  iconLeft={IconClose}
+                  className={cnMixSpace({ mL: "xs" })}
                 />
-              </div>
-              <div className="sidebar-body">
-                <Text as="p" size="xs" view="secondary">
-                  Область для контента
-                </Text>
-              </div>
-              <div className="modal-footer">
-                <Button
-                  size="xs"
-                  view="ghost"
-                  width="default"
-                  onlyIcon
-                  iconLeft={IconQuestion}
-                />
-                <div>
-                  <Button label="Кнопка" size="xs" view="secondary" />
-                  <Button
-                    label="Кнопка"
-                    size="xs"
-                    view="ghost"
-                    className={cnMixSpace({ mL: "xs" })}
-                  />
-                </div>
               </div>
             </div>
+          </div>
           </Resizable>
         </div>
         <div className="midle-sidebar">
@@ -111,59 +145,6 @@ export const ResizePage = () => {
               minW: "320px",
             }}
           >
-            <div className="sidebar-box">
-              <div className="header-sidebar">
-                <Text as="p" size="l" view="primary" weight="semibold">
-                  Панель
-                </Text>
-                <Button
-                  size="xs"
-                  view="ghost"
-                  width="default"
-                  onlyIcon
-                  iconLeft={IconClose}
-                />
-              </div>
-              <div className="sidebar-body">
-                <Text as="p" size="xs" view="secondary">
-                  Область для контента
-                </Text>
-              </div>
-              <div className="modal-footer">
-                <Button
-                  size="xs"
-                  view="ghost"
-                  width="default"
-                  onlyIcon
-                  iconLeft={IconQuestion}
-                />
-                <div>
-                  <Button label="Кнопка" size="xs" view="secondary" />
-                  <Button
-                    label="Кнопка"
-                    size="xs"
-                    view="ghost"
-                    className={cnMixSpace({ mL: "xs" })}
-                  />
-                </div>
-              </div>
-            </div>
-          </Resizable>
-        </div>
-      </div>
-      <div className="resize-bottom">
-        <Resizable
-          className="resize-bottom__box"
-          handleClasses={{
-            top: "pointer-events-none",
-            bottom: "pointer-events-none",
-            left: "pointer-events-none",
-            topRight: "pointer-events-none",
-            bottomRight: "pointer-events-none",
-            bottomLeft: "pointer-events-none",
-            topLeft: "pointer-events-none",
-          }}
-        >
           <div className="sidebar-box">
             <div className="header-sidebar">
               <Text as="p" size="l" view="primary" weight="semibold">
@@ -201,6 +182,59 @@ export const ResizePage = () => {
               </div>
             </div>
           </div>
+          </Resizable>
+        </div>
+      </div>
+      <div className="resize-bottom">
+        <Resizable
+          className="resize-bottom__box"
+          handleClasses={{
+            top: "pointer-events-none",
+            bottom: "pointer-events-none",
+            left: "pointer-events-none",
+            topRight: "pointer-events-none",
+            bottomRight: "pointer-events-none",
+            bottomLeft: "pointer-events-none",
+            topLeft: "pointer-events-none",
+          }}
+        >
+        <div className="sidebar-box">
+          <div className="header-sidebar">
+            <Text as="p" size="l" view="primary" weight="semibold">
+              Панель
+            </Text>
+            <Button
+              size="xs"
+              view="ghost"
+              width="default"
+              onlyIcon
+              iconLeft={IconClose}
+            />
+          </div>
+          <div className="sidebar-body">
+            <Text as="p" size="xs" view="secondary">
+              Область для контента
+            </Text>
+          </div>
+          <div className="modal-footer">
+            <Button
+              size="xs"
+              view="ghost"
+              width="default"
+              onlyIcon
+              iconLeft={IconQuestion}
+            />
+            <div>
+              <Button label="Кнопка" size="xs" view="secondary" />
+              <Button
+                label="Кнопка"
+                size="xs"
+                view="ghost"
+                className={cnMixSpace({ mL: "xs" })}
+              />
+            </div>
+          </div>
+        </div>
         </Resizable>
       </div>
     </div>
