@@ -50,9 +50,9 @@ export const Header = ({ searchHeader, removeLogo }) => {
             <IconSearchStroked className="search-icon" />
           </div>
         </div>
-        <div className="line"></div>
         {searchHeader ? null : (
           <>
+          <div className="line"></div>
             {/* <div className={`${location === "/" ? "hidden " : ""}line`}></div> */}
             <div
               className={`${
