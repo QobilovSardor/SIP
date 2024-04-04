@@ -16,6 +16,7 @@ export const OtherOverlayContent = ({
           activeNav={activeNav}
           openNav={activeNav}
           navbarHidden={true}
+          handleToggleNav={handleToggleNav}
         />
         <div className="flex-item">
           <Main noFull={true} />

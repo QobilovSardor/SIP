@@ -5,6 +5,7 @@ import { Button } from "@consta/uikit/Button";
 import { cnMixSpace } from "@consta/uikit/MixSpace";
 import { Resizable } from "re-resizable";
 import { NavbarLayout } from "../layouts";
+// import { ResirerComp } from "./ResirerComp";
 
 export const OtherBlockContainer = ({
   // eslint-disable-next-line react/prop-types
@@ -16,6 +17,7 @@ export const OtherBlockContainer = ({
 }) => {
   return (
     <div className="max-h-full mb-8">
+      {/* <ResirerComp /> */}
       <DefaultHeader handleToggleNav={handleToggleNav} />
       <div className="flex">
         {activeNav ? (
@@ -38,6 +40,15 @@ export const OtherBlockContainer = ({
             <Resizable
               defaultSize={{
                 width: "1575px",
+              }}
+              handleClasses={{
+                top: "pointer-events-none",
+                bottom: "pointer-events-none",
+                left: "pointer-events-none",
+                topRight: "pointer-events-none",
+                bottomRight: "pointer-events-none",
+                bottomLeft: "pointer-events-none",
+                topLeft: "pointer-events-none",
               }}
               className="resizer-right content-box"
             >

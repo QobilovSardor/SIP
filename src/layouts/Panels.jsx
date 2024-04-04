@@ -18,6 +18,8 @@ export const Panels = ({
   noContent,
   // eslint-disable-next-line react/prop-types, no-unused-vars
   openNav,
+  // eslint-disable-next-line react/prop-types, no-unused-vars
+  hideSidebar,
 }) => {
   console.log(navLayout);
   return (
@@ -36,21 +38,25 @@ export const Panels = ({
           activeNav={activeNav}
         />
       ) : null}
-      <div className="left-sidebar sidebar">
-        {noContent ? null : (
-          <Text view="secondary" size="s">
-            Область для контента левой панели
-          </Text>
-        )}
-      </div>
+      {hideSidebar ? null : (
+        <div className="left-sidebar sidebar">
+          {noContent ? null : (
+            <Text view="secondary" size="s">
+              Область для контента левой панели
+            </Text>
+          )}
+        </div>
+      )}
       <Main button={showBtn} />
-      <div className="right-sidebar sidebar">
-        {noContent ? null : (
-          <Text view="secondary" size="s">
-            Область для контента правой панели
-          </Text>
-        )}
-      </div>
+      {hideSidebar ? null : (
+        <div className="right-sidebar sidebar">
+          {noContent ? null : (
+            <Text view="secondary" size="s">
+              Область для контента правой панели
+            </Text>
+          )}
+        </div>
+      )}
     </div>
   );
 };

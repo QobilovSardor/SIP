@@ -80,44 +80,51 @@ export const Home = ({
                 <Button onlyIcon view="ghost" size="xs" iconLeft={IconKebab} />
               </div>
             </div>
-            <div className="flex px-16 justify-between">
-              <h1 className="title">Подготовка документов №207</h1>
-              <div className="btns">
-                <Button label="Кнопка" view="ghost" size="s" />
-                <div className="line"></div>
-                <Button
-                  onlyIcon
-                  view="ghost"
-                  size="s"
-                  iconLeft={IconSettings}
-                />
-                <Button
-                  onlyIcon
-                  view="ghost"
-                  size="s"
-                  iconLeft={IconSettings}
-                />
+            <div className="home-text__boxes">
+              <div className="flex px-16 justify-between">
+                <h1 className="title">Подготовка документов №207</h1>
+                <div className="btns">
+                  <Button label="Кнопка" view="ghost" size="s" />
+                  <div className="line"></div>
+                  <Button
+                    onlyIcon
+                    view="ghost"
+                    size="s"
+                    iconLeft={IconSettings}
+                  />
+                  <Button
+                    onlyIcon
+                    view="ghost"
+                    size="s"
+                    iconLeft={IconSettings}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="flex px-16 my-16 justify-between">
-              <h3>Подготовка документов №207</h3>
-              <div className="btns">
-                <Button label="Кнопка" view="ghost" size="xs" />
-                <div className="line"></div>
-                <Button
-                  onlyIcon
-                  view="ghost"
-                  size="xs"
-                  iconLeft={IconSettings}
-                />
-                <Button onlyIcon view="ghost" size="xs" iconLeft={IconKebab} />
+              <div className="flex px-16 justify-between">
+                <h3>Подготовка документов №207</h3>
+                <div className="btns">
+                  <Button label="Кнопка" view="ghost" size="xs" />
+                  <div className="line"></div>
+                  <Button
+                    onlyIcon
+                    view="ghost"
+                    size="xs"
+                    iconLeft={IconSettings}
+                  />
+                  <Button
+                    onlyIcon
+                    view="ghost"
+                    size="xs"
+                    iconLeft={IconKebab}
+                  />
+                </div>
               </div>
+              <Text view="secondary" className="home-info px-16 text-12">
+                Место для вывода очень-очень длинного описания и дополнительной
+                информации. Повторим и покажем на две строки, место <br /> для
+                вывода длинного описания и дополнительной информации
+              </Text>
             </div>
-            <Text view="secondary" className="home-info px-16 text-12">
-              Место для вывода очень-очень длинного описания и дополнительной
-              информации. Повторим и покажем на две строки, место <br /> для
-              вывода длинного описания и дополнительной информации
-            </Text>
             <div className="line full px-16"></div>
             <div className="content-box px-16">
               <Text size="xs" view="secondary">

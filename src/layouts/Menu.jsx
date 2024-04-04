@@ -9,6 +9,7 @@ import { IconAlert } from "@consta/icons/IconAlert";
 import { IconUpload } from "@consta/icons/IconUpload";
 import { IconExpand } from "@consta/icons/IconExpand";
 import { Text } from "@consta/uikit/Text";
+import { Badge } from "@consta/uikit/Badge";
 
 const items = [
   "Общая",
@@ -75,12 +76,19 @@ export const Menu = ({ menuRight }) => {
           <Text size="s" view="secondary">
             Информационный текст
           </Text>
-          <Button
+          {/* <Button
             className="toolbar"
             iconLeft={IconAllDone}
             label="Новый"
             iconRight={IconAlert}
             view="primary"
+            size="xs"
+          /> */}
+          <Badge
+            iconLeft={IconAllDone}
+            iconRight={IconAlert}
+            status="normal"
+            label="Новый"
             size="xs"
           />
           <div className="line"></div>

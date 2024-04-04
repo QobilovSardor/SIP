@@ -6,7 +6,7 @@ export const OtherFixedWidth = () => {
     <div className="other-fix__width">
       <DefaultHeader hideHamburger={true} />
       <div className="flex">
-        <Panels noContent={true} showBtn={true} />
+        <Panels noContent={true} showBtn={true} hideSidebar={true} />
       </div>
     </div>
   );

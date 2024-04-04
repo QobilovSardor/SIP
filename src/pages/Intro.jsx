@@ -9,7 +9,7 @@ const pagesSimple = ["Приложение", "Лейауты"];
 export const Intro = () => {
   return (
     <>
-      <Header />
+      <Header searchHeader={true} />
 
       <div className="intro">
         <Breadcrumbs

@@ -11,12 +11,13 @@ export const HeaderMenu = ({
   navbarHidden,
 }) => {
   return (
-    <>
+    <div className="header-menu">
       <DefaultHeader handleToggleNav={handleToggleNav} />
       <div className="w-full">
         <Menu />
         <div className="w-full flex">
           <NavbarLayout
+            handleToggleNav={handleToggleNav}
             hideHamburger={true}
             activeNav={activeNav}
             openNav={activeNav}
@@ -25,6 +26,6 @@ export const HeaderMenu = ({
           <Main button={true} />
         </div>
       </div>
-    </>
+    </div>
   );
 };

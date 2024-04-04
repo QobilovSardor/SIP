@@ -69,6 +69,16 @@ body {
   background: #EDEEF0;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  background: #0042690F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0042693D;
+  border-radius: 8px;
+}
+
 .wrapper {
   /* min-width: 1920px; */
   width: 100%;
@@ -227,6 +237,15 @@ body {
   margin: 0 !important;
 }
 
+.navbar-two__panel .navbar,
+.navbar-screen .navbar {
+  height: 100vh;
+}
+
+.header-menu .navbar,
+.header-menu .main {
+  height: calc(100vh - 48px - 38px);
+}
 
 .nav-list a {
   font-size: 12px;
@@ -273,10 +292,6 @@ body {
 
 .header-right .User:hover {
   background: transparent;
-}
-
-.text-12 {
-  font-size: 12px !important;
 }
 
 .home .User-Name {
@@ -416,8 +431,8 @@ body {
 }
 
 .home .home-info {
-  margin: 16px 0 24px;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 140%;
 }
 
 .home {
@@ -438,7 +453,6 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  margin: 24px 0;
 }
 
 .search-box {
@@ -470,11 +484,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 24px;
-}
-
-.home .tabs {
-  padding-bottom: 12px;
 }
 
 .home .bottom-main {
@@ -485,8 +494,6 @@ body {
   flex-direction: column;
   background: #EDEEF0;
   height: calc(100vh - 560px);
-  /* width: calc(100vw - 320px);
-  max-width: 100vw; */
 }
 
 .home .header-breadcrumbs.pl-0 {
@@ -496,6 +503,7 @@ body {
 .search-btns>div {
   display: flex;
   gap: 4px;
+  align-items: center;
 }
 
 .search-btns .btns {
@@ -514,6 +522,19 @@ body {
 
 .home-container {
   margin: 0 16px;
+}
+
+.home .home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 12px 16px;
+}
+
+.home-text__boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .home .justify-between {
@@ -558,7 +579,6 @@ body {
 }
 
 .home .nav-bottom {
-  padding: 12px 0 24px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -626,15 +646,16 @@ body {
   border-right: 1px solid #00416633;
   background: #fff;
   text-align: center;
-  /* margin: 0 auto; */
   width: 56px;
   min-width: 56px;
-  overflow: hidden;
+  overflow-y: auto;
   transition: width, left, right, 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: calc(100vh - 48px);
 }
+
 
 .navbar .hamburger-menu {
   margin: 0 4px;
@@ -740,10 +761,6 @@ body {
   align-items: start;
 }
 
-.navbar .Collapse-Body {
-  margin-left: 31px;
-}
-
 .navbar .Collapse {
   gap: 0;
 }
@@ -826,7 +843,7 @@ body {
 }
 
 .left-nav__boxes .Collapse-Body .Collapse-Content {
-  padding-left: 8px;
+  padding-left: 36px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -872,13 +889,23 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  /* padding-left: 16px; */
-  /* padding-right: 16px; */
 }
 
 .other-fix__width .header-container {
   max-width: 1280px;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.other-fix__width .main {
+  background: #EDEEF0;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.other-fix__width .panels {
+  background: #fff;
 }
 
 .other-overaly__content {
@@ -976,6 +1003,8 @@ body {
   width: calc(100vw - 16px);
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  height: calc(100vh - 64px);
+  overflow: hidden;
 }
 
 .top-content {
@@ -990,6 +1019,7 @@ body {
 .resizer-right {
   /* flex: 1 1 0%; */
   flex-grow: auto;
+  max-width: calc(100vw - 320px - 16px);
 }
 
 .resizer-bttom {
@@ -1225,8 +1255,35 @@ body {
   min-height: 160px;
   min-width: 320px;
   background: #fff;
+  border: 1px solid red;
 }
 
 .max-h-full .other-block__container .top-content .content-box {
   height: auto;
 }
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.navbar-bottom .nav-list.col:hover {
+  background: #00426912;
+}
+
+.navbar-bottom .nav-list.col.avatar:hover {
+  background: transparent;
+}
+
+.left-nav__boxes .Collapse-Label .nav-link {
+  padding-left: 4px;
+}
+
+.User-Name {
+  font-size: 12px;
+}
+
+/* .navbar-bottom .nav-list.col.avatar:hover {
+  background: transparent;
+} */
+
+/* ===================================================================== */

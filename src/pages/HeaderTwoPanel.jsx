@@ -13,7 +13,7 @@ export const HeaderTwoPanel = ({
     <>
       <DefaultHeader handleToggleNav={handleToggleNav} />
       <div className="flex">
-        <Panels showBtn={true} activeNav={activeNav} navbarHidden={true} />
+        <Panels showBtn={true} activeNav={activeNav} handleToggleNav={handleToggleNav} navbarHidden={true} />
       </div>
     </>
   );

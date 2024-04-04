@@ -4,7 +4,7 @@ import { Main } from "../layouts/Main";
 export const NavbarHeaderDefault = () => {
   return (
     <>
-      <div className="flex w-full">
+      <div className="flex w-full navbar-screen">
         <NavbarLayout openNav={false} hideHamburger={false} />
         <div className="w-full">
           <Header searchHeader={true} removeLogo={true} />

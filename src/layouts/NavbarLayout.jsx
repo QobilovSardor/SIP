@@ -56,7 +56,7 @@ export const NavbarLayout = ({
       }));
     }
   };
-  console.log(handleToggleNav);
+  
   const clicker = () => {
     handleChangeActive();
     if (handleToggleNav) {
@@ -298,7 +298,7 @@ export const NavbarLayout = ({
           <div className="line"></div>
 
           <Collapse
-            className="nav-list col"
+            className="nav-list col mb-4"
             size="xs"
             label={
               <div className="flex items-center">
