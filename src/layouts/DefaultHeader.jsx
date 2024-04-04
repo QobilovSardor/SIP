@@ -29,7 +29,6 @@ export const DefaultHeader = ({ hideHamburger, handleToggleNav }) => {
 
   const clicker = () => {
     handleToggleNav();
-    console.log("clock");
   };
 
   return (

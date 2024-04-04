@@ -29,7 +29,12 @@ const items = [
 const pagesSimple = ["Главная", "Раздел", "Страница"];
 
 // eslint-disable-next-line react/prop-types
-export const Header = ({ searchHeader, removeLogo, hamburgerLogo, handleToggleNav }) => {
+export const Header = ({
+  searchHeader,
+  removeLogo,
+  hamburgerLogo,
+  handleToggleNav,
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const location = useLocation().pathname;
   const clicker = () => {
@@ -46,6 +51,7 @@ export const Header = ({ searchHeader, removeLogo, hamburgerLogo, handleToggleNa
             iconLeft={IconHamburger}
             className="hamburger-menu"
             onClick={clicker}
+            // onClick={() => setIsSidebarOpen(true)}
           />
         ) : null}
         {removeLogo ? null : (

@@ -33,21 +33,19 @@ export const NavbarLayout = ({
   activeNav,
   // eslint-disable-next-line react/prop-types
   navbarHidden = false,
+  // eslint-disable-next-line react/prop-types
+  handleToggleNav,
 }) => {
   const [isActive, setIsActive] = useState(openNav);
   const [isOpen, setOpen] = useState({});
+
   useEffect(() => {
     setIsActive(openNav);
   }, [openNav]);
 
-
   const handleChangeActive = () => {
     setIsActive(!isActive);
     setOpen({});
-  };
-  const clicker = () => {
-    handleChangeActive();
-    // activeNav();
   };
 
   const handleCollapseToggle = (key) => {
@@ -56,6 +54,16 @@ export const NavbarLayout = ({
         ...prevState,
         [key]: !prevState[key],
       }));
+    }
+  };
+  console.log(handleToggleNav);
+  const clicker = () => {
+    handleChangeActive();
+    if (handleToggleNav) {
+      handleToggleNav();
+    }
+    if (handleToggleNav) {
+      handleToggleNav();
     }
   };
 

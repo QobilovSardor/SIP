@@ -15,7 +15,7 @@ export const OtherBlockContainer = ({
   navbarHidden,
 }) => {
   return (
-    <div className="max-h-full">
+    <div className="max-h-full mb-8">
       <DefaultHeader handleToggleNav={handleToggleNav} />
       <div className="flex">
         {activeNav ? (
@@ -24,8 +24,10 @@ export const OtherBlockContainer = ({
             activeNav={activeNav}
             openNav={activeNav}
             navbarHidden={true}
+            handleToggleNav={handleToggleNav}
           />
         ) : null}
+
         <div className="other-block__container">
           <div className="top-content">
             <div className="top-content__left content-box">
