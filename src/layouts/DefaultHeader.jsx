@@ -23,9 +23,14 @@ const items = [
 ];
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
-export const DefaultHeader = ({ hideHamburger }) => {
+export const DefaultHeader = ({ hideHamburger, handleToggleNav }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const location = useLocation().pathname;
+
+  const clicker = () => {
+    handleToggleNav();
+    console.log("clock");
+  };
 
   return (
     <header className="header">
@@ -38,6 +43,7 @@ export const DefaultHeader = ({ hideHamburger }) => {
               onlyIcon
               iconLeft={IconHamburger}
               className="hamburger-menu"
+              onClick={clicker}
             />
           )}
           <a className="logo-box" href="#!">

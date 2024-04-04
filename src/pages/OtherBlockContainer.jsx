@@ -4,38 +4,48 @@ import { Text } from "@consta/uikit/Text";
 import { Button } from "@consta/uikit/Button";
 import { cnMixSpace } from "@consta/uikit/MixSpace";
 import { Resizable } from "re-resizable";
+import { NavbarLayout } from "../layouts";
 
-export const OtherBlockContainer = () => {
+export const OtherBlockContainer = ({
+  // eslint-disable-next-line react/prop-types
+  activeNav,
+  // eslint-disable-next-line react/prop-types
+  handleToggleNav,
+  // eslint-disable-next-line react/prop-types, no-unused-vars
+  navbarHidden,
+}) => {
   return (
     <div className="max-h-full">
-      <DefaultHeader />
-      <div className="other-block__container">
-        <div className="top-content">
-          {/* <Resizable className="resizer-left content-box"> */}
-          <div className="top-content__left content-box">
-            <Text view="secondary" size="s">
-              Область для контента
-            </Text>
-          </div>
-          {/* </Resizable> */}
-          <Resizable
-            defaultSize={{
-              width: "1575px",
-            }}
-            className="resizer-right content-box"
-          >
-            <div className="top-content__right">
+      <DefaultHeader handleToggleNav={handleToggleNav} />
+      <div className="flex">
+        {activeNav ? (
+          <NavbarLayout
+            hideHamburger={true}
+            activeNav={activeNav}
+            openNav={activeNav}
+            navbarHidden={true}
+          />
+        ) : null}
+        <div className="other-block__container">
+          <div className="top-content">
+            <div className="top-content__left content-box">
               <Text view="secondary" size="s">
                 Область для контента
               </Text>
             </div>
-          </Resizable>
-        </div>
-        {/* <Resizable
-          className="resizer-bottom"
-          defaultSize={{ height: 200 }}
-          enable={{ top: true, bottom: true }}
-        > */}
+            <Resizable
+              defaultSize={{
+                width: "1575px",
+              }}
+              className="resizer-right content-box"
+            >
+              <div className="top-content__right">
+                <Text view="secondary" size="s">
+                  Область для контента
+                </Text>
+              </div>
+            </Resizable>
+          </div>
           <div className="bottom-content content-box">
             <div>
               <Text view="secondary" size="s">
@@ -53,7 +63,7 @@ export const OtherBlockContainer = () => {
               </Link>
             </div>
           </div>
-        {/* </Resizable> */}
+        </div>
       </div>
     </div>
   );

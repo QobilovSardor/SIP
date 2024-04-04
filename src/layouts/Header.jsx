@@ -29,10 +29,12 @@ const items = [
 const pagesSimple = ["Главная", "Раздел", "Страница"];
 
 // eslint-disable-next-line react/prop-types
-export const Header = ({ searchHeader, removeLogo, hamburgerLogo }) => {
+export const Header = ({ searchHeader, removeLogo, hamburgerLogo, handleToggleNav }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const location = useLocation().pathname;
-
+  const clicker = () => {
+    handleToggleNav();
+  };
   return (
     <header className="header">
       <div className="header-left">
@@ -43,6 +45,7 @@ export const Header = ({ searchHeader, removeLogo, hamburgerLogo }) => {
             onlyIcon
             iconLeft={IconHamburger}
             className="hamburger-menu"
+            onClick={clicker}
           />
         ) : null}
         {removeLogo ? null : (
@@ -120,10 +123,7 @@ export const Header = ({ searchHeader, removeLogo, hamburgerLogo }) => {
             />
             <Button view="clear" size="xs" onlyIcon iconLeft={IconBento} />
           </div>
-          <User
-            avatarUrl={assets.avatar}
-            name="Имя Фамилия"
-          />
+          <User avatarUrl={assets.avatar} name="Имя Фамилия" />
         </div>
       )}
     </header>

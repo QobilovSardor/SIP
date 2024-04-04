@@ -1,5 +1,5 @@
 import { User } from "@consta/uikit/User";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Button } from "@consta/uikit/Button";
 import { IconHamburger } from "@consta/icons/IconHamburger";
 import { IconLithologyFilled } from "@consta/icons/IconLithologyFilled";
@@ -19,19 +19,35 @@ import { IconAdd } from "@consta/icons/IconAdd";
 import { IconRing } from "@consta/icons/IconRing";
 import { IconBento } from "@consta/icons/IconBento";
 import { IconArrowPrevious } from "@consta/icons/IconArrowPrevious";
+import { useEffect, useState } from "react";
 
-// eslint-disable-next-line react/prop-types
-export const NavbarLayout = ({ openNav, hideHamburger }) => {
+// eslint-disable-next-line react/prop-types, no-unused-vars
+export const NavbarLayout = ({
+  // eslint-disable-next-line react/prop-types
+  openNav,
+  // eslint-disable-next-line react/prop-types
+  hideHamburger,
+  // eslint-disable-next-line react/prop-types
+  showNav,
+  // eslint-disable-next-line react/prop-types
+  activeNav,
+  // eslint-disable-next-line react/prop-types
+  navbarHidden = false,
+}) => {
   const [isActive, setIsActive] = useState(openNav);
   const [isOpen, setOpen] = useState({});
-
   useEffect(() => {
     setIsActive(openNav);
   }, [openNav]);
 
+
   const handleChangeActive = () => {
     setIsActive(!isActive);
     setOpen({});
+  };
+  const clicker = () => {
+    handleChangeActive();
+    // activeNav();
   };
 
   const handleCollapseToggle = (key) => {
@@ -44,7 +60,11 @@ export const NavbarLayout = ({ openNav, hideHamburger }) => {
   };
 
   return (
-    <div className={`navbar ${isActive ? "active" : null}`}>
+    <div
+      className={`navbar ${isActive ? "active" : ""} ${
+        showNav ? "active" : ""
+      }  ${activeNav ? "active" : ""} ${navbarHidden ? "navbar-hidden" : ""}`}
+    >
       <div className="navbar-top">
         {hideHamburger ? null : (
           <>
@@ -336,7 +356,7 @@ export const NavbarLayout = ({ openNav, hideHamburger }) => {
           onlyIcon
           iconLeft={IconArrowPrevious}
           className="hamburger-menu arrow-prew"
-          onClick={handleChangeActive}
+          onClick={clicker}
         />
       </div>
     </div>
