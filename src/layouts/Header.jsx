@@ -121,7 +121,7 @@ export const Header = ({ searchHeader, removeLogo, hamburgerLogo }) => {
             <Button view="clear" size="xs" onlyIcon iconLeft={IconBento} />
           </div>
           <User
-            avatarUrl="https://i.ibb.co/K2R8Lqb/Rectangle-1496.png"
+            avatarUrl={assets.avatar}
             name="Имя Фамилия"
           />
         </div>

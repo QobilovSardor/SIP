@@ -30,59 +30,58 @@ export const DefaultHeader = ({ hideHamburger }) => {
   return (
     <header className="header">
       <div className="header-container">
-      <div className="header-left">
-        {hideHamburger ? null : (
-          <Button
-            view="clear"
-            size="xs"
-            onlyIcon
-            iconLeft={IconHamburger}
-            className="hamburger-menu"
-          />
-        )}
-        <a className="logo-box" href="#!">
-          <div className="logo">
-            <img src={assets.logo} alt="logo" width="10" height="11" />
-          </div>
-          <p>Приложение</p>
-        </a>
-        <div className={`${location === "/" ? "hidden " : ""}line`}></div>
-        <div
-          className={`${location === "/" ? "hidden " : ""} header-breadcrumbs`}
-        >
-          <div className="nav-list">
-            <ul>
-              {items.map((item, index) => (
-                <li key={index}>
-                  <a
-                    className={index === activeIndex ? "active" : ""}
-                    href="#!"
-                    onClick={() => setActiveIndex(index)}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        <div className="header-left">
+          {hideHamburger ? null : (
+            <Button
+              view="clear"
+              size="xs"
+              onlyIcon
+              iconLeft={IconHamburger}
+              className="hamburger-menu"
+            />
+          )}
+          <a className="logo-box" href="#!">
+            <div className="logo">
+              <img src={assets.logo} alt="logo" width="10" height="11" />
+            </div>
+            <p>Приложение</p>
+          </a>
+          <div className={`${location === "/" ? "hidden " : ""}line`}></div>
+          <div
+            className={`${
+              location === "/" ? "hidden " : ""
+            } header-breadcrumbs`}
+          >
+            <div className="nav-list">
+              <ul>
+                {items.map((item, index) => (
+                  <li key={index}>
+                    <a
+                      className={index === activeIndex ? "active" : ""}
+                      href="#!"
+                      onClick={() => setActiveIndex(index)}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div className={`${location === "/" ? "hidden " : ""} header-right`}>
-        <div>
-          <Button view="clear" size="xs" onlyIcon iconLeft={IconRing} />
-          <Button
-            view="clear"
-            size="xs"
-            onlyIcon
-            iconLeft={IconSearchStroked}
-          />
-          <Button view="clear" size="xs" onlyIcon iconLeft={IconBento} />
+        <div className={`${location === "/" ? "hidden " : ""} header-right`}>
+          <div>
+            <Button view="clear" size="xs" onlyIcon iconLeft={IconRing} />
+            <Button
+              view="clear"
+              size="xs"
+              onlyIcon
+              iconLeft={IconSearchStroked}
+            />
+            <Button view="clear" size="xs" onlyIcon iconLeft={IconBento} />
+          </div>
+          <User avatarUrl={assets.avatar} name="Имя Фамилия" />
         </div>
-        <User
-          avatarUrl="https://i.ibb.co/K2R8Lqb/Rectangle-1496.png"
-          name="Имя Фамилия"
-        />
-      </div>
       </div>
     </header>
   );

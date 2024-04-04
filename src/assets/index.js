@@ -20,8 +20,10 @@ import page17 from "./page17.png";
 import page18 from "./page18.png";
 import page19 from "./page19.png";
 import page20 from "./page20.png";
+import avatar from "./avatar.png";
 
 export default {
+  avatar,
   logo,
   page01,
   page1_1,

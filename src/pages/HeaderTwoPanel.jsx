@@ -6,7 +6,7 @@ export const HeaderTwoPanel = () => {
   return (
     <>
       <DefaultHeader />
-      <Panels />
+      <Panels showBtn={true} />
     </>
   );
 };

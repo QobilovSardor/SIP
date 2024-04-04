@@ -64,7 +64,7 @@ export const NavbarLayout = ({ openNav, hideHamburger }) => {
             </div>
           </>
         )}
-        <div>
+        <div className="left-nav__boxes">
           <div className="nav-list active">
             <div className="nav-list__icon">
               <IconHome />
@@ -289,7 +289,7 @@ export const NavbarLayout = ({ openNav, hideHamburger }) => {
 
       <div className="navbar-bottom">
         <Collapse
-          className="nav-list col"
+          className="nav-list col nav-profile__box"
           size="xs"
           label={
             <div className="flex items-center">
@@ -304,7 +304,7 @@ export const NavbarLayout = ({ openNav, hideHamburger }) => {
           iconPosition=""
         ></Collapse>
         <Collapse
-          className="nav-list col"
+          className="nav-list col nav-profile__box mt-4 mb-12"
           size="xs"
           label={
             <div className="flex items-center">
@@ -319,15 +319,12 @@ export const NavbarLayout = ({ openNav, hideHamburger }) => {
           iconPosition=""
         ></Collapse>
         <Collapse
-          className="nav-list col"
+          className="nav-list col nav-profile__box avatar"
           size="xs"
           label={
             <div className="flex items-center">
               <div className="nav-list__icon">
-                <User
-                  avatarUrl="https://i.ibb.co/K2R8Lqb/Rectangle-1496.png"
-                  name="Имя Фамилия"
-                />
+                <User avatarUrl={assets.avatar} name="Имя Фамилия" />
               </div>
             </div>
           }

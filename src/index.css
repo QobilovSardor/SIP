@@ -108,14 +108,15 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-right: 16px;
-  /* margin-right: 8px; */
+  /* margin-right: 16px; */
 }
 
-.home .hamburger-menu,
-.home .header .logo-box {
+.home .hamburger-menu {
   margin-right: 8px;
+}
 
+.home .header .logo-box {
+  margin-right: 16px;
 }
 
 .home .Breadcrumbs::-webkit-scrollbar {
@@ -175,7 +176,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-left: 8px;
+  /* margin-left: 8px; */
 }
 
 .header-dropdown {
@@ -210,7 +211,7 @@ body {
 }
 
 .nav-list a:hover {
-  color: #0BA5FF;
+  color: #002033;
 }
 
 .home .flex .btns .line,
@@ -549,7 +550,7 @@ body {
 }
 
 .menu .nav-list a.active::before {
-  bottom: -12px;
+  bottom: -9px;
 }
 
 /* sidebar */
@@ -650,11 +651,19 @@ body {
   height: 10px;
 }
 
+.header .User {
+  gap: 0 !important;
+}
+
+.header .header-left .header-breadcrumbs>button {
+  margin-left: 16px;
+}
+
 .nav-list {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 4px;
+  /* padding: 4px; */
   width: 100%;
   overflow: hidden;
   border-radius: 8px;
@@ -673,6 +682,7 @@ body {
 
 .nav-list.active .nav-link {
   color: #002033;
+  font-weight: 500;
 }
 
 .nav-link {
@@ -693,6 +703,7 @@ body {
 .navbar .Collapse-Label {
   width: 100%;
   padding: 0;
+  border-radius: 8px;
 }
 
 .navbar .nav-list.col {
@@ -729,6 +740,10 @@ body {
   white-space: nowrap !important;
 }
 
+.navbar .Collapse-Label a:hover {
+  color: #00203399;
+}
+
 .items-center {
   align-items: center;
 }
@@ -751,8 +766,63 @@ body {
 
 .navbar .arrow-prew {
   transition: all .2s ease-in-out;
+  margin-top: 12px;
 }
 
+.navbar .navbar-top .nav-list__icon {
+  padding: 4px;
+}
+
+.navbar-top .Collapse-Label .icons--Icon-Svg path {
+  fill: #00203399;
+}
+
+.navbar-top .nav-link {
+  font-weight: 400;
+}
+
+.left-nav__boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.left-nav__boxes .Collapse-Label {
+  padding-right: 12px;
+  transition: all .2s linear;
+}
+
+.left-nav__boxes .Collapse-Label:hover {
+  background: #00426912;
+}
+
+.left-nav__boxes .Collapse-Body .Collapse-Content {
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 4px 0;
+}
+
+.nav-profile__box {
+  padding: 4px;
+}
+
+.nav-profile__box.avatar {
+  height: 32px;
+}
+
+.navbar-bottom .User-Name {
+  margin-bottom: 0;
+}
+
+.mt-4 {
+  margin-top: 4px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
 
 .navbar .nav-list__icon svg path {
   fill: #00203399;
@@ -773,8 +843,8 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
+  /* padding-left: 16px; */
+  /* padding-right: 16px; */
 }
 
 .other-fix__width .header-container {
