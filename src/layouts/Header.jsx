@@ -30,9 +30,13 @@ const pagesSimple = ["Главная", "Раздел", "Страница"];
 
 // eslint-disable-next-line react/prop-types
 export const Header = ({
+  // eslint-disable-next-line react/prop-types
   searchHeader,
+  // eslint-disable-next-line react/prop-types
   removeLogo,
+  // eslint-disable-next-line react/prop-types
   hamburgerLogo,
+  // eslint-disable-next-line react/prop-types
   handleToggleNav,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
