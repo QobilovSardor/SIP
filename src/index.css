@@ -781,6 +781,11 @@ body {
   border-radius: 8px;
   padding-left: 36px;
   transition: all .3s linear;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 32px;
 }
 
 .navbar .Collapse-Body {
