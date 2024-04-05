@@ -56,7 +56,7 @@ export const NavbarLayout = ({
       }));
     }
   };
-  
+
   const clicker = () => {
     handleChangeActive();
     if (handleToggleNav) {
@@ -114,8 +114,8 @@ export const NavbarLayout = ({
             iconPosition="right"
             onClick={() => handleCollapseToggle("collapse1")}
           >
-            <p>Общая</p>
-            <p>Детальная</p>
+            <a href="#!">Общая</a>
+            <a href="#!">Детальная</a>
           </Collapse>
 
           <Collapse
@@ -133,9 +133,9 @@ export const NavbarLayout = ({
             iconPosition="right"
             onClick={() => handleCollapseToggle("collapse2")}
           >
-            <p>Карточки</p>
-            <p>Список</p>
-            <p>Детальная</p>
+            <a href="#!">Карточки</a>
+            <a href="#!">Список</a>
+            <a href="#!">Детальная</a>
           </Collapse>
 
           <Collapse
@@ -153,12 +153,12 @@ export const NavbarLayout = ({
             iconPosition="right"
             onClick={() => handleCollapseToggle("collapse3")}
           >
-            <p>Общая</p>
-            <p>Информация</p>
-            <p>Файлы</p>
-            <p>Команда</p>
-            <p>История</p>
-            <p>Комментарии</p>
+            <a href="#!">Общая</a>
+            <a href="#!">Информация</a>
+            <a href="#!">Файлы</a>
+            <a href="#!">Команда</a>
+            <a href="#!">История</a>
+            <a href="#!">Комментарии</a>
           </Collapse>
 
           <Collapse
