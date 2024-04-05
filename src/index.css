@@ -854,11 +854,10 @@ body {
 }
 
 .left-nav__boxes .Collapse-Body .Collapse-Content {
-  /* padding-left: 36px; */
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin: 4px 0;
+  padding-top: 4px;
   width: 100%;
 }
 
