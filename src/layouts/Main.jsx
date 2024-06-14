@@ -2,18 +2,22 @@ import { Text } from "@consta/uikit/Text";
 import { Button } from "@consta/uikit/Button";
 import { Link } from "react-router-dom";
 import { cnMixSpace } from "@consta/uikit/MixSpace";
+import { NotFoundData } from "../components";
 
-// eslint-disable-next-line react/prop-types
-export const Main = ({ button, className, noFull }) => {
+export const Main = ({ button, className, noFull, notFound }) => {
   return (
     <div
       className={`flex ${noFull ? "no-full" : ""}`}
       style={{ width: "100%" }}
     >
       <main className={`main ${className}`}>
-        <Text view="secondary" size="s">
-          Область для контента
-        </Text>
+        {notFound && (
+          <>
+            <NotFoundData />
+           
+          </>
+        )}
+
         {button ? (
           <Link to="/" className="main-link">
             <Button

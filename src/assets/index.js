@@ -21,6 +21,8 @@ import page18 from "./page18.png";
 import page19 from "./page19.png";
 import page20 from "./page20.png";
 import avatar from "./avatar.png";
+import headerLogo from "./icons/logo-icon.svg";
+import notFoundImg from "./not-found.svg";
 
 export default {
   avatar,
@@ -46,4 +48,6 @@ export default {
   page18,
   page19,
   page20,
+  headerLogo,
+  notFoundImg
 };

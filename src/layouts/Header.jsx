@@ -12,6 +12,8 @@ import { useState } from "react";
 import { User } from "@consta/uikit/User";
 import { useLocation } from "react-router-dom";
 import { IconHamburger } from "@consta/icons/IconHamburger";
+import { IconStorage } from '@consta/icons/IconStorage';
+import { IconFolders } from "@consta/icons/IconFolders";
 
 const items = [
   "Главная",
@@ -28,15 +30,11 @@ const items = [
 ];
 const pagesSimple = ["Главная", "Раздел", "Страница"];
 
-// eslint-disable-next-line react/prop-types
+
 export const Header = ({
-  // eslint-disable-next-line react/prop-types
   searchHeader,
-  // eslint-disable-next-line react/prop-types
   removeLogo,
-  // eslint-disable-next-line react/prop-types
   hamburgerLogo,
-  // eslint-disable-next-line react/prop-types
   handleToggleNav,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -55,19 +53,18 @@ export const Header = ({
             iconLeft={IconHamburger}
             className="hamburger-menu"
             onClick={clicker}
-            // onClick={() => setIsSidebarOpen(true)}
           />
         ) : null}
         {removeLogo ? null : (
           <a className="logo-box" href="#!">
             <div className="logo">
-              <img src={assets.logo} alt="logo" width="10" height="11" />
+              <img src={assets.headerLogo} alt="header-logo" width="10" height="11" />
             </div>
-            <p>Приложение</p>
+            <p>Geoapp</p>
           </a>
         )}
         <div className={`${location === "/" ? "hidden " : ""}search-box`}>
-          <div className="search-box mr-">
+          <div className="search-box">
             <input type="text" placeholder="Поиск" />
             <IconSearchStroked className="search-icon" />
           </div>
@@ -75,11 +72,9 @@ export const Header = ({
         {searchHeader ? null : (
           <>
             <div className="line"></div>
-            {/* <div className={`${location === "/" ? "hidden " : ""}line`}></div> */}
             <div
-              className={`${
-                location === "/" ? "hidden " : ""
-              } header-breadcrumbs`}
+              className={`${location === "/" ? "hidden " : ""
+                } header-breadcrumbs`}
             >
               <Button
                 label="Назад"
@@ -97,7 +92,6 @@ export const Header = ({
               <Text size="xs" view="secondary">
                 20.01.2023
               </Text>
-              {/* <Tag className="header-dropdown" icon={IconKebab} size="xs" /> */}
               <Button onlyIcon view="cencle" iconLeft={IconKebab} size="xs" />
               <div className="line mx-8"></div>
               <div className="nav-list">
@@ -124,16 +118,12 @@ export const Header = ({
       ) : (
         <div className={`${location === "/" ? "hidden " : ""} header-right`}>
           <div>
-            <Button view="clear" size="xs" onlyIcon iconLeft={IconRing} />
-            <Button
-              view="clear"
-              size="xs"
-              onlyIcon
-              iconLeft={IconSearchStroked}
+            <Button view="clear" size="xs" onlyIcon iconLeft={IconFolders}
             />
-            <Button view="clear" size="xs" onlyIcon iconLeft={IconBento} />
+            <Button view="clear" size="xs" onlyIcon iconLeft={IconRing} />
+            <Button view="clear" size="xs" onlyIcon iconLeft={IconStorage} />
           </div>
-          <User avatarUrl={assets.avatar} name="Имя Фамилия" />
+          <User avatarUrl={assets.avatar} />
         </div>
       )}
     </header>

@@ -13,6 +13,7 @@ import {
   NavbarHeaderTwoPanelModern,
   NavbarOpen,
   NavbarTwoPanel,
+  NotFound,
   OpenNavbarHeaderDefault,
   OpenNavbarHeaderModern,
   OpenPanelOrModal,
@@ -111,6 +112,10 @@ const coreRoutes = [
   {
     path: "resizer-page",
     component: ResizePage,
+  },
+  {
+    path: "not-found",
+    component: NotFound,
   },
 ];
 const routes = [...coreRoutes];

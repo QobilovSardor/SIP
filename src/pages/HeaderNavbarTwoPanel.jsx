@@ -2,11 +2,8 @@ import { Header, NavbarLayout } from "../layouts";
 import { Panels } from "../layouts/Panels";
 
 export const HeaderNavbarTwoPanel = ({
-  // eslint-disable-next-line react/prop-types
   activeNav,
-  // eslint-disable-next-line react/prop-types
   handleToggleNav,
-  // eslint-disable-next-line react/prop-types, no-unused-vars
   navbarHidden,
 }) => {
   return (
